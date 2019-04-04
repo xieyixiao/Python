@@ -1,6 +1,7 @@
 import requests
 from openpyxl import Workbook
 
+
 def get_json(url, page, lang_name):
     data = {'first': 'true', 'pn': page, 'kd': lang_name}
     json = requests.post(url, data).json()
@@ -32,6 +33,7 @@ def main():
     for row in info_result:
         ws1.append(row)
     wb.save('职位信息.xlsx')
+
 
 if __name__ == '__main__':
     main()

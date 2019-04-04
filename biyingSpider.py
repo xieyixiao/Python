@@ -1,6 +1,7 @@
 import requests
 import re
 import time
+
 local = time.strftime("%Y.%m.%d")
 url = 'http://cn.bing.com/'
 con = requests.get(url)

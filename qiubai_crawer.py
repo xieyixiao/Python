@@ -28,7 +28,7 @@ def get_content(html, page):
                 gender = '男'
             else:
                 gender = ''
-            age = author_info.string   # 获取年龄
+            age = author_info.string  # 获取年龄
         else:  # 匿名用户
             gender = ''
             age = ''
@@ -49,6 +49,7 @@ def main():
         url = 'https://qiushibaike.com/text/page/{}'.format(i)
         html = download_page(url)
         get_content(html, i)
+
 
 if __name__ == '__main__':
     main()

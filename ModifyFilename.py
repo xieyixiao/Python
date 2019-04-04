@@ -1,4 +1,5 @@
 import os
+
 dir = os.getcwd()
 subdir = os.listdir(dir)
 for i in subdir:
@@ -8,4 +9,4 @@ for i in subdir:
         for i in range(len(end_dir)):
             newname = end_dir[i][0:50]
             os.rename(os.path.join(path, end_dir[
-                      i]), os.path.join(path, newname))
+                i]), os.path.join(path, newname))
