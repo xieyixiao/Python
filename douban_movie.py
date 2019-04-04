@@ -36,8 +36,7 @@ def get_li(doc):
         level_star = i.find(
             'span', attrs={'class': 'rating_num'}).get_text()  # 评分
         star = i.find('div', attrs={'class': 'star'})
-        star_num = star.find(text=re.compile('评价'))  # 评价
-
+        star_num = re.findall("\d+", star.find(text=re.compile('人评价')))[0]  # 评价
         info = i.find('span', attrs={'class': 'inq'})  # 短评
         if info:  # 判断是否有短评
             info_list.append(info.get_text())
